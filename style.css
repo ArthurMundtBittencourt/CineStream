@@ -107,7 +107,7 @@ nav {
     background-color: rgb(38, 48, 48);
 }
 
-.grade-filmes { /* ADD TUDO OQ ESTA ABAIXO */
+.grade-filmes { 
     display: grid;
     gap: 20px;
     padding: 20px;
