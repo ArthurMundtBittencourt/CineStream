@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:darkslategrey;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgb(9, 22, 22);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    color: white;
+    font-family: "Comfortaa", sans-serif;
+    gap: 12px;                
+    padding: 10px;
+
+}
+
+nav {
+    background-color: rgb(27, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    position: -webkit-sticky; 
+    position: sticky;         
+    top: 0;                   
+    z-index: 1000;  
+}
+
+.lista-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+}
+
+.botao-nav {
+    border-radius: 10%;
+    padding: 20px;
+    background-color: rgb(27, 34, 34);
+    color: white;
+    box-shadow: 0;
+    border: none;
+}
+
+.botao-nav:hover {
+    background-color: rgb(54, 68, 68);
+}
+
+.botao-nav:active {
+    background-color: rgb(38, 48, 48);
+}
+
+#filme-destaque {
+    background-color: rgb(31, 54, 48);
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+#capa-destaque {
+    display: flex;
+}
+
+#info-destaque {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: "Valley Sans", sans-serif;
+    font-size: xx-large;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#acao-destaque{
+    margin: 0;
+    padding: 0;
+}
+
+.botao-destaque {
+    border-radius: 10%;
+    padding: 50px;
+    background-color: rgb(27, 34, 34);
+    color: white;
+    box-shadow: 0;
+    border: none;
+    margin: 10px;
+    
+}
+
+.botao-destaque:hover {
+    background-color: rgb(54, 68, 68);
+}
+
+.botao-destaque:active {
+    background-color: rgb(38, 48, 48);
+}
+
+.grade-filmes { /* ADD TUDO OQ ESTA ABAIXO */
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+    justify-content: space-between;
+}
+
+.info-filme {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(57, 97, 97);
+    overflow: hidden;
+}
+
+.info-filme img {
+    width: 100%;
+    height: auto;
+}
+
+.botao-assistir {
+    display: inline-block;
+    background:cadetblue;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.grades {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
