@@ -145,3 +145,37 @@ nav {
     justify-content: center;
     flex-wrap: wrap; 
 }
+
+
+@keyframes pulsar {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5)
+            }
+        }
+
+.botao-destaque {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.botao-destaque:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.botao-assistir {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.botao-assistir:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
