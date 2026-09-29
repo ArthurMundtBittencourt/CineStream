@@ -1,19 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color:darkslategrey;
+    background-color: darkslategrey;
     overflow-x: hidden;
 }
 
 header {
     background-color: rgb(9, 22, 22);
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +23,11 @@ header {
     font-family: "Comfortaa", sans-serif;
     gap: 12px;                
     padding: 10px;
+}
 
+.logo-header {
+    height: 40px; 
+    width: auto;
 }
 
 nav {
@@ -73,6 +78,12 @@ nav {
     display: flex;
 }
 
+#capa-destaque img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 #info-destaque {
     display: flex;
     justify-content: space-between;
@@ -83,7 +94,7 @@ nav {
     align-content: center;
 }
 
-#acao-destaque{
+#acao-destaque {
     margin: 0;
     padding: 0;
 }
@@ -96,11 +107,13 @@ nav {
     box-shadow: 0;
     border: none;
     margin: 10px;
-    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .botao-destaque:hover {
     background-color: rgb(54, 68, 68);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .botao-destaque:active {
@@ -122,6 +135,7 @@ nav {
     border-radius: 5px;
     background-color: rgb(57, 97, 97);
     overflow: hidden;
+    color: white;
 }
 
 .info-filme img {
@@ -131,12 +145,18 @@ nav {
 
 .botao-assistir {
     display: inline-block;
-    background:cadetblue;
+    background: cadetblue;
     color: white;
     padding: 8px 12px;
     text-decoration: none;
     border-radius: 4px;
     margin-top: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.botao-assistir:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .grades {
@@ -144,38 +164,55 @@ nav {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap; 
+    gap: 20px;
 }
-
 
 @keyframes pulsar {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5)
-            }
-        }
-
-.botao-destaque {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5)
+    }
 }
 
-.botao-destaque:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
+@media (max-width: 768px) {
+    nav {
+        padding: 15px;
+    }
+    
+    .lista-nav {
+        gap: 15px;
+    }
+    
+    .botao-nav {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
 
-.botao-assistir {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+    #filme-destaque {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.botao-assistir:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    #info-destaque {
+        font-size: x-large;
+        justify-content: center;
+    }
+
+    .botao-destaque {
+        padding: 20px 40px; 
+        margin: 5px;
+        width: 100%;
+    }
+
+    .grades {
+        padding: 10px;
+    }
+
+    .info-filme {
+        width: 100%;
+        max-width: 320px;
+    }
 }
